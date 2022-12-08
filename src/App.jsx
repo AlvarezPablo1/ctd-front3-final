@@ -4,10 +4,10 @@ import { ContextGlobal } from './Components/utils/global.context';
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Home from "./Routes/Home";
-import Login from "./Routes/Login";
+import Contact from "./Routes/Contact";
 import Detail from "./Routes/Detail";
 import Favs from "./Routes/Favs";
-import Error from "./Components/Error"
+import Error from './Components/Error'
 
 function App() {
 
@@ -24,20 +24,20 @@ function App() {
 
   return (
     <div className={`app ${isDarkMode ? "dark" : "light"}`}>
-      <Navbar />
+      <Navbar/>
       <main>
         <Outlet/>
       <Routes>
           <Route path="/">
-            <Route index path="/home" element={<Home />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/dentist/:id" element={<Detail />} />
             <Route path="/favs" element={<Favs />} />
           </Route>
           <Route path='*' element={<Error/>}/>
         </Routes>
       </main>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

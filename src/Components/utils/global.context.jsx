@@ -9,21 +9,15 @@ export const ContextProvider = ({ children }) => {
   const providerState = useMemo(
     () => ({
       theme: state.theme,
-      login: state.login,
+
       setDarkTheme: () => {
         dispatch({ type: actions.SET_THEME_DARK });
       },
       setLightTheme: () => {
         dispatch({ type: actions.SET_THEME_LIGHT });
       },
-      setLogin: () => {
-        dispatch({ type: actions.SET_LOGIN });
-      },
-      setLogout: () => {
-        dispatch({ type: actions.SET_LOGOUT });
-      },
     }),
-    [state.login, state.theme]
+    [state.theme]
   );
 
   return (

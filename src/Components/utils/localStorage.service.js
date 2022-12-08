@@ -8,14 +8,14 @@ export const setFavInStorage = (dentist) => {
     const isFavOnList = storageFavs.filter(fav => {
         return fav.id === dentist.id
     });
-    if (isFavOnList.length === 0) {
+    if (isFavOnList.length >= 0) {
         storageFavs.push(dentist)
         localStorage.setItem("favs", JSON.stringify(storageFavs));
-        alert("Dentist added successfully");
+        alert("Se agrego a favoritos un dentista");
         return true;
     }
     else {
-        alert("Dentist already on the list");
+        alert("El dentista que selecciono ya se encuentra en favoritos");
         return false;
     }
 }
@@ -26,10 +26,7 @@ export const removeFavInStorage = (id) => {
     if (index !== -1) {
         storageFavs.splice(index, 1);
         localStorage.setItem("favs", JSON.stringify(storageFavs));
-        alert("Dentist removed successfully");
-    }
-    else {
-        alert("An Error has ocurred");
+        alert("Dentista eliminado de favoritos conrrectamente");
     }
 }
 
@@ -40,17 +37,3 @@ export const isFavorited = (id) => {
     });
     return isFavOnList.length === 1;
 };
-
-
-export const getTokenFromStorage = () => {
-    const localData = localStorage.getItem("token");
-    return localData ? localData : null;
-}
-
-export const setTokenInStorage = (token) => {
-    localStorage.setItem("token", token);
-}
-
-export const removeTokenFromStorage = () => {
-    localStorage.removeItem("token");
-}
