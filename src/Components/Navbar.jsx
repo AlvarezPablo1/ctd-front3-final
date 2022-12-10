@@ -45,7 +45,7 @@ const Navbar = () => {
               </li>
               <li className={`nav-item`}>
                 <button className={`btn btn-${isDarkMode ? "light" : "dark"} ${ styles.btnStyle}`}onClick={changeTheme}>
-                  {isDarkMode ? "☀" : "🌙"}
+                  {isDarkMode ? "☀️" : "🌙"}
                 </button>
               </li>
             </ul>

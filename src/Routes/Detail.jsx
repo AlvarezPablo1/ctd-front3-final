@@ -26,7 +26,7 @@ const Detail = () => {
           <h1>Detalle sobre: {dentist.name} </h1>
           <section className="card col-sm-12 col-lg-6 container">
             <div
-              className={`card-body row ${isDarkMode ? styles.cardDark : ""}`}
+              className={`card-body row ${isDarkMode ? styles.dark : ""}`}
             >
               <div className="col-sm-12 col-lg-6">
                 <img

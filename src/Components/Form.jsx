@@ -22,7 +22,7 @@ const Form = () => {
   console.log(loginValues);
 
   return (
-    <div className={`text-center card container ${styles.card} ${isDarkMode ? styles.cardDark : ""}`}>
+    <div className={`text-center card container ${styles.card} ${isDarkMode ? styles.dark : ""}`}>
       <div className={`card-body ${styles.CardBody}`}>
         <form onSubmit={handleSubmitLogin}>
           <input

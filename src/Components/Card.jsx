@@ -28,7 +28,7 @@ const Card = ({ name, username, id }) => {
 
   const memoCard = useMemo(() => {
     return (
-      <div className={`card ${isDarkMode ? styles.cardDark : ""}`}>
+      <div className={`card ${isDarkMode ? styles.dark : ""}`}>
         <img className="card-img-top" src="/images/doctor.jpg" alt="doctorImage"/>
         <div className={`card-body ${styles.CardBody}`}>
           <Link to={`/dentist/${id}`}>
@@ -37,7 +37,7 @@ const Card = ({ name, username, id }) => {
           <h5 className={`card-title ${styles.title}`}>{name}</h5>
           <p className="card-text">{username}</p>
           <button onClick={favorite ? removeFav : addFav} className={`btn btn-${isDarkMode ? "dark" : "light"} ${styles.favButton}`}>
-            {favorite ? "Eliminar de favoritos" : "Agregar a favoritos"}
+            {favorite ? "❌Eliminar de favoritos❌" : "⭐️Agregar a favoritos⭐️"}
           </button>
         </div>
       </div>
